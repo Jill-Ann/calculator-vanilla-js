@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style-grid.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&family=Titillium+Web&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet"> -->
+    <script src="script.js"></script>
+  </head>
+  <body>
+      <h1>Calculator Fun (with CSS Grid)</h1>
+      <div class="calculator-body">
+        <div class="internal-grid">
+          <div class="screen" id="screen">
+            <p id="display"></p>
+          </div>
+          <button type="button" class="btn btn-clear" onclick="clearScreen()">clear</button>
+          <button type="button" class="btn btn-divide" onclick="divide(); displayInput(value)" id="division" value=" / ">/</button>
+          <button type="button" class="btn btn-x" onclick="multiply(); displayInput(value)" id="multiplication" value=" * ">x</button>
+          <button type="button" class="btn btn-7" onclick="setInput(value); displayInput(value)" value="7">7</button>
+          <button type="button" class="btn btn-8" onclick="setInput(value); displayInput(value)" value="8">8</button>
+          <button type="button" class="btn btn-9" onclick="setInput(value); displayInput(value)" value="9">9</button>
+          <button type="button" class="btn btn-minus" onclick="subtract(); displayInput(value)" id="subtraction" value=" - ">-</button>
+          <button type="button" class="btn btn-4" onclick="setInput(value); displayInput(value)" value="4">4</button>
+          <button type="button" class="btn btn-5" onclick="setInput(value); displayInput(value)" value="5">5</button>
+          <button type="button" class="btn btn-6" onclick="setInput(value); displayInput(value)" value="6">6</button>
+          <button type="button" class="btn btn-plus" onclick="add(); displayInput(value)" id="addition" value=" + ">+</button>
+          <button type="button" class="btn btn-1" onclick="setInput(value); displayInput(value)" value="1">1</button>
+          <button type="button" class="btn btn-2" onclick="setInput(value); displayInput(value)" value="2">2</button>
+          <button type="button" class="btn btn-3" onclick="setInput(value); displayInput(value)" value="3">3</button>
+          <button type="button" class="btn btn-equals" onclick="calculate()" id="calculate">=</button>
+          <button type="button" class="btn btn-0" onclick="setInput(value); displayInput(value)" value="0">0</button>
+          <button type="button" class="btn btn-decimal" value="." onclick="setInput(value)">.</button>
+        </div>
+      </div>
+
+  </body>
+</html>
