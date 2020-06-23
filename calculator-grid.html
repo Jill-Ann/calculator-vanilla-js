@@ -16,16 +16,16 @@
             <p id="display"></p>
           </div>
           <button type="button" class="btn btn-clear" onclick="clearScreen()">clear</button>
-          <button type="button" class="btn btn-divide" onclick="divide(); displayInput(value)" id="division" value=" / ">/</button>
-          <button type="button" class="btn btn-x" onclick="multiply(); displayInput(value)" id="multiplication" value=" * ">x</button>
+          <button type="button" class="btn btn-divide" onclick="divide(); displayInput(value); setOperator(id)" id="division" value=" / ">/</button>
+          <button type="button" class="btn btn-x" onclick="multiply(); displayInput(value); setOperator(id)" id="multiplication" value=" * ">x</button>
           <button type="button" class="btn btn-7" onclick="setInput(value); displayInput(value)" value="7">7</button>
           <button type="button" class="btn btn-8" onclick="setInput(value); displayInput(value)" value="8">8</button>
           <button type="button" class="btn btn-9" onclick="setInput(value); displayInput(value)" value="9">9</button>
-          <button type="button" class="btn btn-minus" onclick="subtract(); displayInput(value)" id="subtraction" value=" - ">-</button>
+          <button type="button" class="btn btn-minus" onclick="subtract(); displayInput(value); setOperator(id)" id="subtraction" value=" - ">-</button>
           <button type="button" class="btn btn-4" onclick="setInput(value); displayInput(value)" value="4">4</button>
           <button type="button" class="btn btn-5" onclick="setInput(value); displayInput(value)" value="5">5</button>
           <button type="button" class="btn btn-6" onclick="setInput(value); displayInput(value)" value="6">6</button>
-          <button type="button" class="btn btn-plus" onclick="add(); displayInput(value)" id="addition" value=" + ">+</button>
+          <button type="button" class="btn btn-plus" onclick="add(); displayInput(value); setOperator(id)" id="addition" value=" + ">+</button>
           <button type="button" class="btn btn-1" onclick="setInput(value); displayInput(value)" value="1">1</button>
           <button type="button" class="btn btn-2" onclick="setInput(value); displayInput(value)" value="2">2</button>
           <button type="button" class="btn btn-3" onclick="setInput(value); displayInput(value)" value="3">3</button>

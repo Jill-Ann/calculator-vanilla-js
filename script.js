@@ -11,19 +11,19 @@ const clear = () => {
   operator = undefined;
 }
 
-const setInput = (v) => {
+const setInput = (value) => {
   if (input2) {
-    input2 = Number(input2.toString().concat(v));
+    input2 = Number(input2.toString().concat(value));
   } else if (input1) {
-      if (!operator) {
-        input1 = Number(input1.toString().concat(v));
-      } else {
-        input2 = Number(v);
-    }
+      (!operator ? input1 = Number(input1.toString().concat(value)) : input2 = Number(value));
   } else {
     clearScreen();
-    input1 = Number(v);
+    input1 = Number(value);
   }
+}
+
+const setOperator = (value) => {
+  operator = value;
 }
 
 const calculate = () => {
@@ -40,26 +40,24 @@ const calculate = () => {
     case "division": document.getElementById('display').innerHTML = divide(input1, input2);
       clear();
       break;
+    default:
+      console.log('No input defined');
   }
 }
 
 const add = (a,b) => {
-  operator = 'addition';
   return a+b;
 }
 
 const subtract = (a,b) => {
-  operator = 'subtraction';
   return a-b;
 }
 
 const multiply = (a,b) => {
-  operator = 'multiplication';
   return a*b;
 }
 
 const divide = (a,b) => {
-  operator = 'division';
   return a/b;
 }
 
@@ -67,6 +65,7 @@ const displayInput = (value) => {
   document.getElementById('display').textContent += value;
 }
 
+// this replaces what is displayed
 // const displayInput = (value) => {
 //   document.getElementById('screen').innerHTML = value;
 // }
